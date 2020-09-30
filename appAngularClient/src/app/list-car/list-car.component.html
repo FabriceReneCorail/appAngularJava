@@ -1,11 +1,13 @@
 
 <h1>Cars</h1>
 
-<div *ngFor="let car of cars" >
+<div *ngFor="let car of cars" class="listCars">
 
+<mat-card>
   {{car.name}}
+  <mat-divider></mat-divider>
 
-  {{car.id}}
+</mat-card>
 
 </div>
 
