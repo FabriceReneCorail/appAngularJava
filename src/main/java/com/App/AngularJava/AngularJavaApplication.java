@@ -12,6 +12,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -92,6 +93,7 @@ class carController {
 
 	//get
 	@GetMapping("/allCars")
+	@CrossOrigin
 	public Collection<Car> beautifulCar(){
 		return repository.findAll().stream().
 				filter(this :: isCool)
