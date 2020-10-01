@@ -12,6 +12,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
+import { CarEditComponent } from './car-edit/car-edit.component';
 
 
 
@@ -20,7 +21,8 @@ import { MatMenuModule } from '@angular/material/menu';
 @NgModule({
   declarations: [
     AppComponent,
-    ListCarComponent
+    ListCarComponent,
+    CarEditComponent
   ],
   imports: [
     BrowserModule,

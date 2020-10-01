@@ -30,7 +30,7 @@ public class AngularJavaApplication {
 @Bean
 ApplicationRunner init(CarRepository repository){
 	return args -> {
-		Stream.of("Ferrari", "Bugatti","Lamborghini","Aston Martin","MCLaren","Porsche", "Pagani","Fiat","Tesla","Volvo","Renault").forEach(
+		Stream.of("Ferrari", "Bugatti","Lamborghini","Mercedes", "Aston Martin","MCLaren","Porsche", "Pagani","Fiat","Tesla","Volvo","Renault").forEach(
 				name ->{repository.save(new Car(name));
 				});
 		for (Car car : repository.findAll()) {
@@ -104,4 +104,5 @@ class carController {
 				!car.getName().equals("Renault");
 	}
 
+	
 }
