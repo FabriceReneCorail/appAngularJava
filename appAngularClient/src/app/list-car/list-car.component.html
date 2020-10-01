@@ -1,13 +1,10 @@
-
-<h1>Cars</h1>
-
-<div *ngFor="let car of cars" class="listCars">
-
 <mat-card>
-  {{car.name}}
-  <mat-divider></mat-divider>
+  <mat-card-content>
+<mat-list role="list">
+  <mat-list-item *ngFor="let car of cars" class="listCars">{{car.name}}
+      <img mat-list-avatar src="{{car.giphyUrl}}" alt="{{car.name}}">
+</mat-list-item>
 
+</mat-list>
+  </mat-card-content>
 </mat-card>
-
-</div>
-
